@@ -1,18 +1,18 @@
 #include <iostream>
 #include <string.h>
+#include "Student.h"
 
 using namespace std;
 
+//Definition of node class. It has two variables which point to the node and student classes.....................
 class Node{
  public:
   Node* getNext();
-  Node();
+  Node(Student* s);
   ~Node();
-  Node* createNode(Student*);
-  void deleteNode();
+  Student* getStudent();
+  void setNext(Node* n);
  private:
-  Node* n;
-
-
-  
-}
+  Student* studentpointer;
+  Node* next;
+};
